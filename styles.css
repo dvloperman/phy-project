@@ -1,0 +1,1157 @@
+/* ==================== Variables & Reset ==================== */
+:root {
+    --primary-color: #1e3c72;
+    --secondary-color: #2a5298;
+    --accent-color: #ff6b6b;
+    --success-color: #2ecc71;
+    --warning-color: #f39c12;
+    --danger-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --text-color: #333;
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+    --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* ==================== Navbar ==================== */
+.navbar {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-logo i {
+    font-size: 2rem;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* ==================== Progress Bar ==================== */
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-color), var(--warning-color));
+    width: 0%;
+    z-index: 999;
+    transition: width 0.1s ease;
+}
+
+/* ==================== Header ==================== */
+.header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.fade-in-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    animation: fadeInDown 1s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.fade-in-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 1s ease 0.2s both;
+    opacity: 0.9;
+}
+
+.header-info {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeIn 1s ease 0.4s both;
+}
+
+.badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Header Animation */
+.header-animation {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    width: 200px;
+    height: 200px;
+}
+
+.molecule {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    animation: float 6s infinite ease-in-out;
+}
+
+.molecule:nth-child(1) {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.molecule:nth-child(2) {
+    top: 40%;
+    left: 60%;
+    animation-delay: 1s;
+}
+
+.molecule:nth-child(3) {
+    top: 60%;
+    left: 30%;
+    animation-delay: 2s;
+}
+
+/* ==================== Container & Sections ==================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.section {
+    margin-bottom: 4rem;
+    animation: slideInUp 0.6s ease;
+}
+
+.section-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.section-header h2,
+.section-header h3 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section-header h3 {
+    font-size: 1.5rem;
+}
+
+.section-header i {
+    color: var(--accent-color);
+}
+
+/* ==================== Cards ==================== */
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 2rem;
+    border-right: 5px solid var(--primary-color);
+    animation: slideInRight 0.6s ease;
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.card-light {
+    border-right-color: var(--secondary-color);
+}
+
+.card-question {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8f1f8 100%);
+    border-right-color: var(--accent-color);
+}
+
+.definition {
+    background: var(--light-color);
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.content-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin: 0.8rem 0;
+}
+
+.highlight-text {
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* ==================== Tabs ==================== */
+.tabs-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--light-color);
+}
+
+.tab-button {
+    background: transparent;
+    border: none;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--primary-color);
+    border-bottom: 3px solid transparent;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.tab-button:hover {
+    background: rgba(30, 60, 114, 0.05);
+}
+
+.tab-button.active {
+    border-bottom-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.tabs-content {
+    position: relative;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* ==================== Examples & Lists ==================== */
+.examples {
+    margin: 2rem 0;
+}
+
+.examples h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.example-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.example-list li {
+    background: var(--light-color);
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: var(--transition);
+}
+
+.example-list li:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateX(-5px);
+}
+
+.formula {
+    background: rgba(30, 60, 114, 0.1);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+}
+
+.example-list li:hover .formula {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* ==================== Comparison Box ==================== */
+.comparison-box {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-around;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.comparison-item {
+    flex: 1;
+    min-width: 150px;
+    background: var(--light-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.comparison-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.comparison-item .formula {
+    font-size: 1.2rem;
+}
+
+.small-text {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.arrow {
+    font-size: 2rem;
+    color: var(--accent-color);
+}
+
+/* ==================== Mixture Types ==================== */
+.mixture-types {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.mixture-card {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    border: 2px solid var(--primary-color);
+    transition: var(--transition);
+}
+
+.mixture-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--box-shadow);
+}
+
+.mixture-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.mixture-card p {
+    margin: 0.5rem 0;
+}
+
+.mixture-card .example {
+    background: white;
+    padding: 0.8rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+/* ==================== Table ==================== */
+.table-responsive {
+    overflow-x: auto;
+    margin: 2rem 0;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.comparison-table thead {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 1rem;
+    text-align: right;
+    border-bottom: 1px solid var(--light-color);
+}
+
+.comparison-table tbody tr:hover {
+    background: var(--light-color);
+}
+
+.comparison-table .row-1 {
+    border-right: 5px solid var(--primary-color);
+}
+
+.comparison-table .row-2 {
+    border-right: 5px solid var(--secondary-color);
+}
+
+.comparison-table .row-3 {
+    border-right: 5px solid var(--accent-color);
+}
+
+/* ==================== Experiment ==================== */
+.experiment-card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border-left: 5px solid var(--accent-color);
+}
+
+.experiment-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.experiment-tabs {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--light-color);
+    overflow-x: auto;
+}
+
+.exp-tab-btn {
+    background: transparent;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    cursor: pointer;
+    color: var(--primary-color);
+    border-bottom: 3px solid transparent;
+    transition: var(--transition);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.exp-tab-btn:hover {
+    background: rgba(30, 60, 114, 0.05);
+}
+
+.exp-tab-btn.active {
+    border-bottom-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.experiment-contents {
+    position: relative;
+}
+
+.exp-content {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.exp-content.active {
+    display: block;
+}
+
+.exp-content h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.materials-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.materials-list li {
+    background: var(--light-color);
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: var(--transition);
+}
+
+.materials-list li:hover {
+    background: var(--secondary-color);
+    color: white;
+    transform: translateX(-5px);
+}
+
+/* Steps */
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.step {
+    background: linear-gradient(135deg, var(--light-color) 0%, #f9f9f9 100%);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    border: 2px solid var(--primary-color);
+    transition: var(--transition);
+}
+
+.step:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--box-shadow);
+}
+
+.step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto 1rem;
+}
+
+.step p {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+/* Observation & Explanation Boxes */
+.observation-box,
+.explanation-box {
+    background: linear-gradient(135deg, #e8f8f5 0%, #f0fdf4 100%);
+    border-left: 5px solid var(--success-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.explanation-box {
+    background: linear-gradient(135deg, #fef3c7 0%, #fef7e0 100%);
+    border-left-color: var(--warning-color);
+}
+
+.observation-box p,
+.explanation-box p {
+    margin: 0.8rem 0;
+}
+
+.equation {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    margin: 1.5rem 0;
+    border: 2px solid var(--primary-color);
+}
+
+.equation .formula {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.species-list {
+    list-style: none;
+    display: grid;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.species-list li {
+    background: white;
+    padding: 0.8rem;
+    border-radius: 6px;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1rem;
+}
+
+/* ==================== Microscopic Visualization ==================== */
+.microscopic-visualization {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin: 2rem 0;
+}
+
+.microscopic-section {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.microscopic-section h4 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.crystal-structure,
+.dissolved-structure {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 1rem;
+    justify-items: center;
+    margin: 1.5rem 0;
+    padding: 2rem;
+    background: var(--light-color);
+    border-radius: 8px;
+}
+
+.ion {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+}
+
+.ion.na {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.ion.cl {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.water-molecule {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    border-radius: 50%;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+    animation: float 3s infinite ease-in-out;
+}
+
+.ion-dissolved {
+    animation: float 3s infinite ease-in-out !important;
+}
+
+.na-dissolved {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.cl-dissolved {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.arrow-down {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin: 2rem 0;
+}
+
+.arrow-down::before {
+    content: '↓';
+    animation: bounce 2s infinite;
+}
+
+/* ==================== Mixtures Comparison ==================== */
+.mixtures-comparison {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.mixture-comparison-item {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.mixture-comparison-item:hover {
+    transform: translateY(-10px);
+}
+
+.mixture-visual {
+    margin-bottom: 1.5rem;
+    height: 150px;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.liquid {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+.homogeneous-liquid {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    border-radius: 8px;
+}
+
+.water-part {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    border-radius: 8px 0 0 8px;
+}
+
+.oil-part {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    border-radius: 0 8px 8px 0;
+}
+
+.mixture-comparison-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.mixture-comparison-item p {
+    margin: 0.5rem 0;
+}
+
+.mixture-comparison-item .description {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.particle {
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    margin: 0 3px;
+    animation: float 2s infinite ease-in-out;
+}
+
+.particle:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.particle:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* ==================== Results ==================== */
+.results-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.result-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    transition: var(--transition);
+    animation: slideInUp 0.6s ease;
+}
+
+.result-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.result-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.result-item p {
+    color: var(--text-color);
+}
+
+/* ==================== Conclusion ==================== */
+.conclusion-card {
+    background: linear-gradient(135deg, #e8f8f5 0%, #f0fdf4 100%);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--success-color);
+    box-shadow: var(--box-shadow);
+}
+
+.conclusion-text {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.conclusion-highlight {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 5px solid var(--accent-color);
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+}
+
+/* ==================== References ==================== */
+.references-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.reference-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border-top: 4px solid var(--primary-color);
+    transition: var(--transition);
+}
+
+.reference-item:hover {
+    transform: translateX(-5px);
+}
+
+.reference-item p {
+    margin: 0.5rem 0;
+}
+
+.reference-item p:first-child {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* ==================== Footer ==================== */
+.footer {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+.footer-content p {
+    margin: 0.5rem 0;
+}
+
+/* ==================== Scroll Top Button ==================== */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--accent-color), var(--warning-color));
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    z-index: 999;
+}
+
+.scroll-top-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(255, 107, 107, 0.4);
+}
+
+.scroll-top-btn.show {
+    display: flex;
+}
+
+/* ==================== Animations ==================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* ==================== Responsive Design ==================== */
+@media (max-width: 768px) {
+    .fade-in-title {
+        font-size: 2rem;
+    }
+
+    .fade-in-subtitle {
+        font-size: 1rem;
+    }
+
+    .nav-menu {
+        gap: 1rem;
+    }
+
+    .header {
+        padding: 2rem 1rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .comparison-box {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .tabs-container {
+        gap: 0.5rem;
+    }
+
+    .tab-button {
+        padding: 0.7rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .steps-container {
+        grid-template-columns: 1fr;
+    }
+
+    .scroll-top-btn {
+        width: 45px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 1.2rem;
+    }
+
+    .example-list,
+    .materials-list,
+    .results-container,
+    .references-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .fade-in-title {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.3rem;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+}
