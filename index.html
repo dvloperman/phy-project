@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الفرد والنوع والخليط الكيميائي</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-flask-vial"></i>
+                <span>الفيزياء والكيمياء</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">الرئيسية</a></li>
+                <li><a href="#content" class="nav-link">المحتوى</a></li>
+                <li><a href="#experiment" class="nav-link">التجربة</a></li>
+                <li><a href="#conclusion" class="nav-link">الخاتمة</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header id="home" class="header">
+        <div class="header-content">
+            <h1 class="fade-in-title">الفرد الكيميائي والنوع الكيميائي والخليط الكيميائي</h1>
+            <p class="fade-in-subtitle">بحث شامل مع تجارب عملية توضيحية</p>
+            <div class="header-info">
+                <span class="badge">ثانوي</span>
+                <span class="badge">فيزياء وكيمياء</span>
+            </div>
+        </div>
+        <div class="header-animation">
+            <div class="molecule"></div>
+            <div class="molecule"></div>
+            <div class="molecule"></div>
+        </div>
+    </header>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- المقدمة -->
+        <section class="section" id="introduction">
+            <div class="section-header">
+                <h2><i class="fas fa-book-open"></i> المقدمة</h2>
+            </div>
+            <div class="card card-light">
+                <p class="content-text">
+                    توجد المادة من حولنا في أشكال متعددة، مثل الماء والهواء والملح والمعادن. ولتفسير تركيب المادة وخصائصها، 
+                    تعتمد الكيمياء على مستويين متكاملين: <strong>المستوى العياني</strong> الذي يهتم بما يمكن ملاحظته، 
+                    و<strong>المستوى المجهري</strong> الذي يهتم بالكيانات الدقيقة المكونة للمادة.
+                </p>
+            </div>
+        </section>
+
+        <!-- الإشكالية -->
+        <section class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-question-circle"></i> إشكالية البحث</h2>
+            </div>
+            <div class="card card-question">
+                <p class="content-text highlight-text">
+                    ما الفرق بين الفرد الكيميائي والنوع الكيميائي والخليط الكيميائي؟ 
+                    وكيف يمكن توضيح هذه المفاهيم من خلال تجربة بسيطة؟
+                </p>
+            </div>
+        </section>
+
+        <!-- المحتوى الرئيسي -->
+        <section id="content" class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-microscope"></i> المحتوى العلمي</h2>
+            </div>
+
+            <!-- Tabs Navigation -->
+            <div class="tabs-container">
+                <button class="tab-button active" data-tab="individual">الفرد الكيميائي</button>
+                <button class="tab-button" data-tab="species">النوع الكيميائي</button>
+                <button class="tab-button" data-tab="mixture">الخليط الكيميائي</button>
+                <button class="tab-button" data-tab="comparison">المقارنة</button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tabs-content">
+                <!-- Tab 1: Individu Chimique -->
+                <div class="tab-content active" id="individual-tab">
+                    <div class="card">
+                        <h3>الفرد أو الكيان الكيميائي</h3>
+                        <p class="definition">
+                            <strong>التعريف:</strong> كيان كيميائي واحد، ويمكن أن يكون ذرة أو جزيئًا أو أيونًا.
+                        </p>
+                        <div class="examples">
+                            <h4>أمثلة:</h4>
+                            <ul class="example-list">
+                                <li><span class="formula">Fe</span> - ذرة الحديد</li>
+                                <li><span class="formula">H₂O</span> - جزيء الماء</li>
+                                <li><span class="formula">O₂</span> - جزيء ثنائي الأكسجين</li>
+                                <li><span class="formula">Na⁺</span> - أيون الصوديوم</li>
+                                <li><span class="formula">Cl⁻</span> - أيون الكلوريد</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Espèce Chimique -->
+                <div class="tab-content" id="species-tab">
+                    <div class="card">
+                        <h3>النوع الكيميائي</h3>
+                        <p class="definition">
+                            <strong>التعريف:</strong> مجموعة من الكيانات الكيميائية المتماثلة.
+                        </p>
+                        <div class="comparison-box">
+                            <div class="comparison-item">
+                                <h4>جزيء واحد</h4>
+                                <p><span class="formula">H₂O</span> واحد</p>
+                                <p class="small-text">كيان كيميائي</p>
+                            </div>
+                            <div class="arrow">→</div>
+                            <div class="comparison-item">
+                                <h4>مجموعة جزيئات</h4>
+                                <p>عدد كبير من <span class="formula">H₂O</span></p>
+                                <p class="small-text">نوع كيميائي (ماء)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 3: Mélange Chimique -->
+                <div class="tab-content" id="mixture-tab">
+                    <div class="card">
+                        <h3>الخليط الكيميائي</h3>
+                        <p class="definition">
+                            <strong>التعريف:</strong> عينة تحتوي على نوعين كيميائيين أو أكثر.
+                        </p>
+                        <div class="mixture-types">
+                            <div class="mixture-card">
+                                <h4><i class="fas fa-check-circle"></i> خليط متجانس</h4>
+                                <p>طور واحد موحد المظهر</p>
+                                <p class="example">مثال: ماء + <span class="formula">NaCl</span> (محلول)</p>
+                            </div>
+                            <div class="mixture-card">
+                                <h4><i class="fas fa-times-circle"></i> خليط غير متجانس</h4>
+                                <p>أكثر من طور واحد</p>
+                                <p class="example">مثال: ماء + زيت</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 4: Comparison -->
+                <div class="tab-content" id="comparison-tab">
+                    <div class="card">
+                        <h3>جدول المقارنة</h3>
+                        <div class="table-responsive">
+                            <table class="comparison-table">
+                                <thead>
+                                    <tr>
+                                        <th>المفهوم</th>
+                                        <th>التعريف</th>
+                                        <th>مثال</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="row-1">
+                                        <td><strong>الفرد الكيميائي</strong></td>
+                                        <td>كيان واحد: ذرة أو جزيء أو أيون</td>
+                                        <td><span class="formula">H₂O</span> واحد</td>
+                                    </tr>
+                                    <tr class="row-2">
+                                        <td><strong>النوع الكيميائي</strong></td>
+                                        <td>مجموعة كيانات متماثلة</td>
+                                        <td>الماء <span class="formula">H₂O</span></td>
+                                    </tr>
+                                    <tr class="row-3">
+                                        <td><strong>الخليط</strong></td>
+                                        <td>عينة بنوعين أو أكثر</td>
+                                        <td>ماء + <span class="formula">NaCl</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- التجربة -->
+        <section id="experiment" class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-flask"></i> التجربة العملية</h2>
+            </div>
+
+            <div class="experiment-card">
+                <h3>تحضير خليط متجانس من الماء وكلوريد الصوديوم</h3>
+
+                <!-- Experiment Tabs -->
+                <div class="experiment-tabs">
+                    <button class="exp-tab-btn active" data-exp-tab="goal">الهدف</button>
+                    <button class="exp-tab-btn" data-exp-tab="materials">الأدوات والمواد</button>
+                    <button class="exp-tab-btn" data-exp-tab="steps">خطوات التجربة</button>
+                    <button class="exp-tab-btn" data-exp-tab="observation">الملاحظة</button>
+                    <button class="exp-tab-btn" data-exp-tab="explanation">التفسير</button>
+                </div>
+
+                <!-- Experiment Content -->
+                <div class="experiment-contents">
+                    <div class="exp-content active" id="goal-exp">
+                        <h4><i class="fas fa-target"></i> الهدف</h4>
+                        <p>توضيح مفهوم الخليط المتجانس، وإظهار أن اختفاء الملح بالعين المجردة لا يعني اختفاءه من المحلول.</p>
+                    </div>
+
+                    <div class="exp-content" id="materials-exp">
+                        <h4><i class="fas fa-box"></i> الأدوات والمواد</h4>
+                        <ul class="materials-list">
+                            <li><i class="fas fa-circle"></i> كأس شفاف</li>
+                            <li><i class="fas fa-circle"></i> ماء نقي</li>
+                            <li><i class="fas fa-circle"></i> كمية صغيرة من كلوريد الصوديوم NaCl</li>
+                            <li><i class="fas fa-circle"></i> ملعقة للتحريك</li>
+                        </ul>
+                    </div>
+
+                    <div class="exp-content" id="steps-exp">
+                        <h4><i class="fas fa-list-ol"></i> خطوات التجربة</h4>
+                        <div class="steps-container">
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <p>نضع كمية مناسبة من الماء في الكأس</p>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <p>نضيف كمية صغيرة من كلوريد الصوديوم</p>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <p>نحرك الخليط جيدًا</p>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">4</div>
+                                <p>نستمر في التحريك حتى يذوب الملح كليًا</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="exp-content" id="observation-exp">
+                        <h4><i class="fas fa-eye"></i> الملاحظة</h4>
+                        <div class="observation-box">
+                            <p>نلاحظ اختفاء بلورات الملح تدريجيًا، ويصبح السائل متجانس المظهر، 
+                            ولا نستطيع رؤية بلورات الملح بالعين المجردة.</p>
+                        </div>
+                    </div>
+
+                    <div class="exp-content" id="explanation-exp">
+                        <h4><i class="fas fa-lightbulb"></i> التفسير العلمي</h4>
+                        <div class="explanation-box">
+                            <p>اختفاء بلورات الملح <strong>لا يعني اختفاء المادة</strong>. 
+                            فعند ذوبان كلوريد الصوديوم في الماء، تنفصل الأيونات الموجودة في الشبكة البلورية وتنتشر في الماء.</p>
+                            
+                            <div class="equation">
+                                <p><span class="formula">NaCl(s)</span> → <span class="formula">Na⁺(aq)</span> + <span class="formula">Cl⁻(aq)</span></p>
+                            </div>
+
+                            <p><strong>المحلول الناتج يحتوي على:</strong></p>
+                            <ul class="species-list">
+                                <li><span class="formula">H₂O</span> - جزيئات الماء</li>
+                                <li><span class="formula">Na⁺</span> - أيونات الصوديوم</li>
+                                <li><span class="formula">Cl⁻</span> - أيونات الكلوريد</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Microscopic Level Visualization -->
+            <div class="section-header" style="margin-top: 3rem;">
+                <h3>التمثيل على المستوى المجهري</h3>
+            </div>
+
+            <div class="microscopic-visualization">
+                <div class="microscopic-section">
+                    <h4>قبل الذوبان</h4>
+                    <div class="crystal-structure">
+                        <div class="ion na">Na</div>
+                        <div class="ion cl">Cl</div>
+                        <div class="ion na">Na</div>
+                        <div class="ion cl">Cl</div>
+                        <div class="ion na">Na</div>
+                        <div class="ion cl">Cl</div>
+                    </div>
+                    <p class="small-text">شبكة بلورية منتظمة</p>
+                </div>
+
+                <div class="arrow-down"></div>
+
+                <div class="microscopic-section">
+                    <h4>بعد الذوبان</h4>
+                    <div class="dissolved-structure">
+                        <div class="water-molecule">H₂O</div>
+                        <div class="water-molecule">H₂O</div>
+                        <div class="ion na-dissolved">Na⁺</div>
+                        <div class="water-molecule">H₂O</div>
+                        <div class="ion cl-dissolved">Cl⁻</div>
+                        <div class="water-molecule">H₂O</div>
+                    </div>
+                    <p class="small-text">أيونات موزعة في الماء</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- المقارنة بين الخلائط -->
+        <section class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-equals"></i> مقارنة الخلائط المختلفة</h2>
+            </div>
+
+            <div class="mixtures-comparison">
+                <div class="mixture-comparison-item homogeneous">
+                    <div class="mixture-visual">
+                        <div class="liquid homogeneous-liquid">
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                        </div>
+                    </div>
+                    <h4>خليط متجانس</h4>
+                    <p><strong>الماء + NaCl</strong></p>
+                    <p class="description">طور واحد موحد</p>
+                </div>
+
+                <div class="mixture-comparison-item heterogeneous">
+                    <div class="mixture-visual">
+                        <div class="liquid water-part">
+                            <p>ماء</p>
+                        </div>
+                        <div class="liquid oil-part">
+                            <p>زيت</p>
+                        </div>
+                    </div>
+                    <h4>خليط غير متجانس</h4>
+                    <p><strong>الماء + الزيت</strong></p>
+                    <p class="description">طبقات منفصلة</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- النتائج -->
+        <section class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-star"></i> أهم النتائج</h2>
+            </div>
+
+            <div class="results-container">
+                <div class="result-item" style="animation-delay: 0.1s;">
+                    <div class="result-number">1</div>
+                    <p>الفرد الكيميائي هو كيان واحد (ذرة أو جزيء أو أيون)</p>
+                </div>
+                <div class="result-item" style="animation-delay: 0.2s;">
+                    <div class="result-number">2</div>
+                    <p>النوع الكيميائي هو مجموعة من الكيانات المتماثلة</p>
+                </div>
+                <div class="result-item" style="animation-delay: 0.3s;">
+                    <div class="result-number">3</div>
+                    <p>الخليط يحتوي على نوعين أو أكثر</p>
+                </div>
+                <div class="result-item" style="animation-delay: 0.4s;">
+                    <div class="result-number">4</div>
+                    <p>الخليط قد يكون متجانسًا أو غير متجانس</p>
+                </div>
+                <div class="result-item" style="animation-delay: 0.5s;">
+                    <div class="result-number">5</div>
+                    <p>الذوبان ينتج خليطًا متجانسًا لكن يبقى من نوعين</p>
+                </div>
+                <div class="result-item" style="animation-delay: 0.6s;">
+                    <div class="result-number">6</div>
+                    <p>اختفاء المادة بالعين لا يعني اختفاءها من المحلول</p>
+                </div>
+                <div class="result-item" style="animation-delay: 0.7s;">
+                    <div class="result-number">7</div>
+                    <p>الفهم يجمع بين الملاحظة العيانية والتفسير المجهري</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- الخاتمة -->
+        <section id="conclusion" class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-check-double"></i> الخاتمة</h2>
+            </div>
+
+            <div class="conclusion-card">
+                <p class="conclusion-text">
+                    يتضح من خلال هذا البحث أن <strong>الفرد الكيميائي والنوع الكيميائي والخليط الكيميائي</strong> 
+                    مفاهيم مختلفة ومتكاملة. فالفرد أو الكيان الكيميائي هو كيان واحد، أما النوع الكيميائي 
+                    فهو مجموعة من الكيانات المتماثلة، بينما الخليط هو عينة تحتوي على نوعين كيميائيين أو أكثر.
+                </p>
+
+                <p class="conclusion-text">
+                    وقد بينت تجربة إذابة كلوريد الصوديوم في الماء أن الخليط قد يكون متجانسًا رغم عدم إمكانية 
+                    رؤية مكوناته بالعين المجردة. كما أوضحت تجربة الماء والزيت الفرق بين الخليط المتجانس 
+                    والخليط غير المتجانس.
+                </p>
+
+                <p class="conclusion-highlight">
+                    <strong>🔬 بذلك فإن فهم المادة في الكيمياء يعتمد على الجمع بين الملاحظة العيانية 
+                    والتفسير على المستوى المجهري.</strong>
+                </p>
+            </div>
+        </section>
+
+        <!-- المراجع -->
+        <section class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-book"></i> المراجع</h2>
+            </div>
+
+            <div class="references-container">
+                <div class="reference-item">
+                    <p><strong>Ministère de l'Éducation nationale – Éduscol</strong></p>
+                    <p>Physique-Chimie – Grandeurs caractéristiques d'une espèce chimique</p>
+                </div>
+                <div class="reference-item">
+                    <p><strong>Ministère de l'Éducation nationale – Éduscol</strong></p>
+                    <p>Physique-Chimie – Du macroscopique au microscopique</p>
+                </div>
+                <div class="reference-item">
+                    <p><strong>SchoolMouv</strong></p>
+                    <p>Identification d'une espèce chimique - Physique-Chimie</p>
+                </div>
+                <div class="reference-item">
+                    <p><strong>SchoolMouv</strong></p>
+                    <p>Corps purs et mélanges - Physique-Chimie</p>
+                </div>
+                <div class="reference-item">
+                    <p><strong>SchoolMouv</strong></p>
+                    <p>La dissolution des solides ioniques et moléculaires</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 - بحث في الفيزياء والكيمياء | جميع الحقوق محفوظة</p>
+            <p>تم إعداد هذا الموقع بعناية للمرحلة الثانوية</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" class="scroll-top-btn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
